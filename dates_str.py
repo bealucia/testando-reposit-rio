@@ -22,7 +22,13 @@ def option1():
         d0 = date(int(str_date[4]), int(str_date[2]),int(str_date[0]))
         d1 = date(int(str_date[10]), int(str_date[8]),int(str_date[6]))
 
-        print("Diferença de dias:", d1-d0)
+        print("\nDiferença de dias:", d1-d0)
 
+    except KeyError:
+        print("\nEstrutura das datas inadequada")
+    except ValueError:
+        print("\nData não existente")
+    except IndexError:
+        print("\nElementos faltantes na estrutura das datas")
     except:
-        print("Valor inválido")
+        print("\nErro desconhecido")
